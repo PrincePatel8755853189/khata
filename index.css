@@ -1,0 +1,176 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-items {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.nav-items a:hover {
+    color: #ddd;
+}
+
+.logo h1 {
+    font-size: 20px;
+}
+
+/* Main Layout */
+.main_CONTAINER {
+    display: flex;
+    height: calc(100vh - 50px); /* Adjust height based on navbar */
+}
+
+.sidebar {
+    background-color: rgb(249, 249, 247);
+    width: 20%; /* Fixed proportion */
+    min-width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.main {
+    flex-grow: 1;
+    background-color: rgba(185, 182, 182, 0.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.content {
+    text-align: center;
+    border: 3px solid green;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: white;
+    max-width: 400px;
+    width: 100%;
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+.content h2 {
+    color: green;
+    margin: 10px 0;
+}
+
+.content input {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+.content button {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content button:hover {
+    background-color: darkgreen;
+}
+
+/* Floating button */
+.float-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.float-btn:hover {
+    background-color: darkgreen;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-items {
+        gap: 10px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        max-width: 100%;
+        padding: 20px;
+    }
+}

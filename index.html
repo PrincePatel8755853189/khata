@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khata book</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-items">
+            <a href="#">Menu</a>
+            <a href="#">Home</a>
+            <a href="#">User</a>
+            <a href="#">Add New</a>
+            <a href="#">Logout</a>
+        </div>
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <div class="main_CONTAINER">
+        <div class="sidebar">
+            <a href="#">Menu</a>
+            <a href="#">Home</a>
+            <a href="#">User</a>
+            <a href="#">Add New</a>
+            <a href="#">Logout</a>
+        </div>
+        <div class="main">
+            <div class="content">
+                <h2>Scan QR Code</h2>
+                <p>or</p>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Phone Number">
+                <input type="number" placeholder="Enter Amount">
+                <button>Submit</button>
+            </div>
+            <div class="float-btn">+</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const floatBtn = document.querySelector('.float-btn');
+            const contentBox = document.querySelector('.content');
+            floatBtn.addEventListener('click', () => {
+                contentBox.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
